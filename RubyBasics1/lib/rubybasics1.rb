@@ -10,7 +10,7 @@ end
 
 # Part II
 def max_2_sum arr
-  # YOUR CODE HERE
+  sum(arr.sort.last(2))
 end
 
 # Part III
