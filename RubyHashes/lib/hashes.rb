@@ -17,7 +17,20 @@ end
 
 # Part II
 def array2d_2_hash contact_info, contacts
-    # YOUR CODE HERE
+    person = Hash.new
+    i=0
+    j=0
+    if contact_info[i][j] == nil
+        return contacts
+    end
+        contacts.each do |key, value|
+        temp =:"#{key}"
+        person[temp] = {:email => contact_info[i][0], :phone => contact_info[i][1]}
+        i+=1
+        j+=1
+        
+    end
+    return person
 end
 
 # Part III
