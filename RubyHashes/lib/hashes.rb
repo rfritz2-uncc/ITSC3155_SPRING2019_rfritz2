@@ -3,7 +3,7 @@
 def array_2_hash emails, contacts
     person = Hash.new
     i=0
-    if emails[i] == nil
+    if emails.empty?
         return contacts
     else
         contacts.each do |key, value|
@@ -35,5 +35,19 @@ end
 
 # Part III
 def hash_2_array contacts
-    # YOUR CODE HERE
+    person = Array.new
+    email = Array.new
+    phone = Array.new
+    name = Array.new
+    
+    contacts.each do |key, value|
+        temp =:"#{key}"
+        email.push contacts[temp][:email]
+        phone.push contacts[temp][:phone]
+        name.push "#{key}"
+    end
+    person.push email
+    person.push phone
+    person.push name
+    return person.to_a
 end
