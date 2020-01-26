@@ -1,7 +1,18 @@
 # RubyHashes
 # Part I
 def array_2_hash emails, contacts
-    # YOUR CODE HERE
+    person = Hash.new
+    i=0
+    if emails[i] == nil
+        return contacts
+    else
+        contacts.each do |key, value|
+        temp = "#{key}"
+        person[temp] = emails[i]
+        i+=1
+        end
+    end
+    return person
 end
 
 # Part II
