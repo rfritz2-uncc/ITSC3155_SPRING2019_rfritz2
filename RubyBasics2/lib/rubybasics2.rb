@@ -12,5 +12,8 @@ end
 
 # Part III
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  if (s.to_s =~ /^[0-2]+$/ && s.to_i(4) % 4 == 0)
+    return true
+  end
+  false
 end
