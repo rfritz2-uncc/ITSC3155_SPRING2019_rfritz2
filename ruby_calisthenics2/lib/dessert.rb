@@ -26,9 +26,9 @@ end
 
 def delicious?
     if @flavor == "black licorice"
-      false
+     return false
     else
-      true
+      return true
     end
 end
 
