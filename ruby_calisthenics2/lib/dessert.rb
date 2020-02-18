@@ -1,25 +1,35 @@
 class Dessert
-  # add code for setters and getters
-  attr_accessor:name
-  attr_accessor:calories
-  def initialize(name, calories)
+attr_accessor :name, :calories
+def initialize(name, calories)
     @name = name
     @calories = calories
-  end
-  def healthy?
-    if @calories <200
-      return true
-    end
-    return false
-  end
-  def delicious?
-    return true
-  end
+end
+
+def healthy?
+    @calories < 200
+end
+
+def delicious?
+    true
+end
 end
 
 class JellyBean < Dessert
-  # add code for setters and getters
-  def initialize(flavor)
-    # your code here
-  end
+
+attr_accessor :flavor, :name, :calories
+
+def initialize(flavor)
+    @flavor = flavor
+    @name = '/' +flavor+ ' jelly bean/'
+    @calories = 5
+end
+
+def delicious?
+    if @flavor == "black licorice"
+      false
+    else
+      true
+    end
+end
+
 end
